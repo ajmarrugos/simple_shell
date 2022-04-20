@@ -1,0 +1,18 @@
+.\" Manpage for simple_shell.
+.\" Contact 4630@holbertonschool.com to correct errors or typos.
+.TH man 1 "20 Apr 2022" "1.0" "simple_shell man page"
+.SH NAME
+simple_shell \- A custom and simple command line interpreter interface 
+.SH SYNOPSIS
+simple_shell [USERNAME]
+.SH DESCRIPTION
+simple_shell is made to offer a custom command line interpreter that allows the user to execute commands with options according to and input, it communicates with the kernel system and also manages jobs and running procesess.  
+.SH OPTIONS
+The simple_shell program will allow you to use these options: 
+.SH SEE ALSO
+simple_shell(2) simple_shell(3)
+.SH BUGS
+No known bugs.
+.SH AUTHORS
+Alberto Marrugo Saldarriaga (https://github.com/ajmarrugos)
+Juan Pablo Lopera Tobon (https://github.com/vozudo)
