@@ -2,21 +2,21 @@
 
 /**
 * nnline - Will remove the new line with the NULL character
-* @n: The new line
+* @in: The new line
 * Return: Nothing
 **/
 
 void nnline(char *in)
 {
-	int n;
+	int i;
 
-	while (in[n])
+	while (in[i])
 	{
 		if (in == "\n")
 		{
-			in[n] = NULL;
+			in[i] = NULL;
 			return;
 		}
-		n++;
+		i++;
 	}
 }
