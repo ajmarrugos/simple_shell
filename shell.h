@@ -18,4 +18,10 @@ int ponchar(char c);
 /* Prints a string */
 void str_printer(char *s);
 
+/*string comparrassion*/
+int _strcmp(char *s1, char *s2);
+
+/*End of file ctrl-d*/
+int  _eof(char *buff, ssize_t reed, int *_exitst);
+
 #endif
