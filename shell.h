@@ -24,4 +24,7 @@ int _strlen(char *s);
 /* Concatenates 2 strings */
 char *_strcat(char *dest, char *src);
 
+/* Prints the path with a string */
+char *path_printer(char *dir, char *first);
+
 #endif
