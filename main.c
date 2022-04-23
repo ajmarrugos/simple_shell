@@ -13,6 +13,7 @@ int main(int argc, char *argv[], char *envp[] )
 	char *input = NULL;
 	size_t len = 0;
 	ssize_t read = 0;
+	static int _exit, atte;
 	(void)argc, (void)**argv;
 
 	while (1)
@@ -24,5 +25,9 @@ int main(int argc, char *argv[], char *envp[] )
 
 		nnline(input);
 
+		fflush(stdin);
+
 	}
+	free(input);
+	return(0);
 }
