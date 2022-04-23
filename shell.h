@@ -9,7 +9,10 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-/*remove new line*/
+/* Removes new line */
 void nnline(char *in);
+
+/* Prints a string */
+void str_printer(char *s);
 
 #endif
