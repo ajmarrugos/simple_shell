@@ -30,4 +30,7 @@ char *path_printer(char *dir, char *first);
 /* Prints the enviroment variable */
 int env_printer(char **env, int *ex_sts);
 
+/* Print a special number */
+void int_printer(int *atte);
+
 #endif
