@@ -22,6 +22,9 @@ int main(int argc, char **argv)
 			write(STDOUT_FILENO, "SHELL$ ", 7);
 
 		read = getline(&input, &len, stdin);
+		atte++;
+		if (_eof(input, read, &_exit) == 127)
+			continue;
 
 		nnline(input);
 
