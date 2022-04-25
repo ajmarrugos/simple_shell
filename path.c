@@ -12,7 +12,7 @@
 int _path(char *fst, char **inpt, char **env, int *ex_st)
 {
 int i;
-char *tmp, *left, *right;
+char *tmp, *left, *dir;
 char *new = NULL, *envcopy = NULL;
 
 for (i = 0; env[i] != '\0'; i++)
@@ -23,10 +23,10 @@ tmp = strtok(NULL, "= \t");
 
 if (_strcmp(left, "PATH") == 0)
 {
-right = strtok(tmp, ": \t");
+dir = strtok(tmp, ": \t");
 while (right)
 {
-new = pathstr(right, fst);
+new = str_path(dir, fst);
 
 if (access(new, X_OK) == 0)
 {
@@ -40,7 +40,7 @@ free(new);
 free(envcopy);
 return (0);
 }
-right = strtok(NULL, ": \t");
+dir = strtok(NULL, ": \t");
 free(new);
 }
 }
