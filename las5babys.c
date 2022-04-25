@@ -50,30 +50,47 @@ return (0);
 }
 
 /**
- * _strdup - copy the string given as a parameter
- * @str: string
- * Return: du
- */
+* _strcpy - Copy a string pointed to by src
+* @src: Copy from
+* @dest: Destiny to copy
+* Return: String
+**/
+
+char *_strcpy(char *dest, char *src)
+{
+int i;
+for (i = 0; i <= _strlen(src); i++)
+{
+dest[i] = src[i];
+}
+dest[i++] = '\0';
+return (dest);
+}
+
+/**
+* _strdup - Duplicate a string
+* @str: The string to duplicate
+* Return: Duplicated string
+**/
+
 char *_strdup(char *str)
 {
-	int i, j;
-	char *du;
-
-	if (str == 0)
-		return (0);
-
-	j = 0;
-	while (str[j] != 00)
-		j++;
-
-	du = malloc(j * sizeof(*str) + 1);
-
-	if (du == 0)
-		return (0);
-
-	for (i = 0; i <= j; i++)
-		du[i] = str[i];
-
-	du[i] = 00;
-	return (du);
+int x = 0, i = 1;
+char *s;
+if (str == NULL)
+return (NULL);
+while (str[i])
+{
+i++;
+}
+s = malloc((sizeof(char) * i) +1);
+if (s == NULL)
+return (NULL);
+while (x < i)
+{
+s[x] = str[x];
+x++;
+}
+s[x] = '\0';
+return (s);
 }

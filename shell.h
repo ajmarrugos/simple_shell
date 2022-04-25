@@ -18,11 +18,9 @@ int ponchar(char c);
 /* Prints a string */
 void str_printer(char *s);
 
-/*string comparrassion*/
+/* Compares 2 strings */
 int _strcmp(char *s1, char *s2);
 
-/*End of file ctrl-d*/
-int _eof(char *buff, ssize_t reed, int *_exitst);
 
 /* Measures the lenght of a string */
 int _strlen(char *s);
@@ -30,8 +28,14 @@ int _strlen(char *s);
 /* Concatenates 2 strings */
 char *_strcat(char *dest, char *src);
 
-/* Duplicates a string*/
+/* Copy a string pointed to src */
+char *_strcpy(char *dest, char *src);
+
+/* Duplicates a string */
 char *_strdup(char *str);
+
+/* End of file Ctrl-d */
+int _eof(char *buff, ssize_t reed, int *_exitst);
 
 /* Prints the path with a string */
 char *path_printer(char *dir, char *first);
@@ -50,5 +54,7 @@ void _builexit(char *in, char **pasedin, int *_exitst);
 
 /*prints the environment */
 int printenv(char **env, int *_exitst);
+/* Prints the enviroment PATH */
+int _path(char *fst, char **inpt, char **env, int *ex_st);
 
 #endif
