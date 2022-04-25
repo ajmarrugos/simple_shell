@@ -52,4 +52,10 @@ int _path(char *fst, char **inpt, char **env, int *ex_st);
 /* Executes process in the main shell */
 void _xcute(int status, char **args, int *ex_st, int *cnt);
 
+/* Handles special characters and errors at typing commands */
+int super_char(char *buffer, ssize_t bytes, int *ex_st);
+
+/* Helps to free a matrix of pointers */
+void free_matrix(char **matrix, int height);
+  
 #endif
