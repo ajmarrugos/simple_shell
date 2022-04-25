@@ -37,14 +37,14 @@ char *_strdup(char *str);
 /* End of file Ctrl-d */
 int _eof(char *buff, ssize_t reed, int *_exitst);
 
-/* Prints the path with a string */
-char *path_printer(char *dir, char *first);
-
 /* Prints the enviroment variable */
 int env_printer(char **env, int *ex_sts);
 
 /* Print a special number */
 void int_printer(int *atte);
+
+/* Prints the path string */
+char *str_path(char *dir, char *fst);
 
 /* Prints the enviroment PATH */
 int _path(char *fst, char **inpt, char **env, int *ex_st);
