@@ -7,7 +7,7 @@
 * Return: void
 **/
 
-void free_grid(char **matrix, int height)
+void free_matrix(char **matrix, int height)
 {
 int z;
 for (z = 0; z < height; z++)
