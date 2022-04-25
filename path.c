@@ -15,7 +15,7 @@ int i;
 char *tmp, *left, *dir;
 char *new = NULL, *envcopy = NULL;
 
-for (i = 0; env[i] != '\0'; i++)
+for (i = 0; *env[i] != '\0'; i++)
 {
 envcopy = _strdup(env[i]);
 left = strtok(envcopy, "= \t");
@@ -24,7 +24,7 @@ tmp = strtok(NULL, "= \t");
 if (_strcmp(left, "PATH") == 0)
 {
 dir = strtok(tmp, ": \t");
-while (right)
+while (dir)
 {
 new = str_path(dir, fst);
 

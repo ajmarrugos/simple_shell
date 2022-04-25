@@ -4,10 +4,11 @@
 * main - Main input for the program
 * @argc: Number of arguments
 * @argv: Arguments recieved
+* @env: Enviroment variable
 * Return: 0 on success
 **/
 
-int main(int argc, char **argv, **env)
+int main(int argc, char **argv, char **env)
 {
 char *input = NULL;
 size_t len = 0;
@@ -18,7 +19,7 @@ while (1)
 {
 if (isatty(STDIN_FILENO) == 1)
 write(STDOUT_FILENO, "SHELL$ ", 7);
-ead = getline(&input, &len, stdin);
+read = getline(&input, &len, stdin);
 nnline(input);
 fflush(stdin);
 }
