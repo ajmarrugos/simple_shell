@@ -48,3 +48,49 @@ return (s1[a] - s2[a]);
 }
 return (0);
 }
+
+/**
+* _strcpy - Copy a string pointed to by src
+* @src: Copy from
+* @dest: Destiny to copy
+* Return: String
+**/
+
+char *_strcpy(char *dest, char *src)
+{
+int i;
+for (i = 0; i <= _strlen(src); i++)
+{
+dest[i] = src[i];
+}
+dest[i++] = '\0';
+return (dest);
+}
+
+/**
+* _strdup - Duplicate a string
+* @str: The string to duplicate
+* Return: Duplicated string
+**/
+
+char *_strdup(char *str)
+{
+int x = 0, i = 1;
+char *s;
+if (str == NULL)
+return (NULL);
+while (str[i])
+{
+i++;
+}
+s = malloc((sizeof(char) * i) +1);
+if (s == NULL)
+return (NULL);
+while (x < i)
+{
+s[x] = str[x];
+x++;
+}
+s[x] = '\0';
+return (s);
+}
