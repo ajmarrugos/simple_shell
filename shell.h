@@ -46,4 +46,7 @@ int env_printer(char **env, int *ex_sts);
 /* Print a special number */
 void int_printer(int *atte);
 
+/* Prints the enviroment PATH */
+int _path(char *fst, char **inpt, char **env, int *ex_st);
+
 #endif
