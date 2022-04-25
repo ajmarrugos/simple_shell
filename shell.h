@@ -49,4 +49,7 @@ char *str_path(char *dir, char *fst);
 /* Prints the enviroment PATH */
 int _path(char *fst, char **inpt, char **env, int *ex_st);
 
+/* Executes process in the main shell */
+void _xcute(int status, char **args, int *ex_st, int *cnt);
+
 #endif
