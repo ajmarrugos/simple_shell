@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
-* str_printer - Will print a string
-* @s: The string to be printed
-* Return: Void
-**/
+ * str_printer - Will print a string
+ * @s: The string to be printed
+ * Return: Void
+ **/
 
 void str_printer(char *s)
 {
