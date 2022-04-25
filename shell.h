@@ -21,7 +21,6 @@ void str_printer(char *s);
 /* Compares 2 strings */
 int _strcmp(char *s1, char *s2);
 
-
 /* Measures the lenght of a string */
 int _strlen(char *s);
 
@@ -54,6 +53,7 @@ void _builexit(char *in, char **pasedin, int *_exitst);
 
 /*prints the environment */
 int printenv(char **env, int *_exitst);
+
 /* Prints the enviroment PATH */
 int _path(char *fst, char **inpt, char **env, int *ex_st);
 
