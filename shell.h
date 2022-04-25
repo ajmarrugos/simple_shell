@@ -21,7 +21,6 @@ void str_printer(char *s);
 /* Compares 2 strings */
 int _strcmp(char *s1, char *s2);
 
-
 /* Measures the lenght of a string */
 int _strlen(char *s);
 
@@ -33,6 +32,9 @@ char *_strcpy(char *dest, char *src);
 
 /* Duplicates a string */
 char *_strdup(char *str);
+
+/* Will parse/separate text of a string into tokens */
+char **parsero(char *l);
 
 /* End of file Ctrl-d */
 int _eof(char *buff, ssize_t reed, int *_exitst);
