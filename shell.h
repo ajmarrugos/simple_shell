@@ -46,6 +46,9 @@ void int_printer(int *atte);
 char **parse_text(char *parsin);
 
 /* Exit builtin */
-void _exit(char *in, char **pasedin, int *_exitst);
+void _builexit(char *in, char **pasedin, int *_exitst);
+
+/*prints the environment */
+int printenv(char **env, int *_exitst);
 
 #endif

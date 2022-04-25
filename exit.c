@@ -7,7 +7,7 @@
  * @_exitst: exit status
  */
 
-void _exit(char *in, char **pasedin, int *_exitst)
+void _builexit(char *in, char **pasedin, int *_exitst)
 {
     if (_strcmp(pasedin[0], "exit") == 0)
 	{

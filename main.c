@@ -4,17 +4,18 @@
 * main - Main input for the program
 * @argc: Number of arguments
 * @argv: Arguments recieved
+* @env: eviroment
 * Return: 0 on success
 **/
 
-int main(int argc, char **argv)
+int main(int argc, char **argv, char **env)
 {
 	char *input = NULL;
 	size_t len = 0;
 	ssize_t read = 0;
 	static int _exit, atte;
 	char **pasedin = NULL;
-	int n = 0, m = 0;
+	int n = 0, m = 0, status = 0;
 	(void)argc, (void)**argv;
 
 	while (1)
@@ -30,6 +31,14 @@ int main(int argc, char **argv)
 		nnline(input);
 
 		pasedin = parse_text(input);
+
+		_builexit(*input, **pasedin, &_exit);
+
+		if(_strcmp(pasedin[0], "env") == 0)
+		{
+			printenv(env, exit);
+		}
+		
 
 		fflush(stdin);
 	}
