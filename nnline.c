@@ -1,22 +1,21 @@
 #include "shell.h"
 
 /**
-* nnline - Will remove the new line with the NULL character
-* @n: The new line
-* Return: Nothing
-**/
+ * nnline - Will remove the new line with the NULL character
+ * @in: The new line
+ * Return: Nothing
+ **/
 
 void nnline(char *in)
 {
-	int n;
-
-	while (in[n])
+	int i = 0;
+	while (in[i])
 	{
-		if (in == "\n")
+		if (in[i] == '\n')
 		{
-			in[n] = NULL;
+			in[i] = '\0';
 			return;
 		}
-		n++;
+		i++;
 	}
 }

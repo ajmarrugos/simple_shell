@@ -1,5 +1,5 @@
-#ifndef SHELL.H
-#define SHELL.H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -22,6 +22,20 @@ void str_printer(char *s);
 int _strcmp(char *s1, char *s2);
 
 /*End of file ctrl-d*/
-int  _eof(char *buff, ssize_t reed, int *_exitst);
+int _eof(char *buff, ssize_t reed, int *_exitst);
+/* Measures the lenght of a string */
+int _strlen(char *s);
+
+/* Concatenates 2 strings */
+char *_strcat(char *dest, char *src);
+
+/* Prints the path with a string */
+char *path_printer(char *dir, char *first);
+
+/* Prints the enviroment variable */
+int env_printer(char **env, int *ex_sts);
+
+/* Print a special number */
+void int_printer(int *atte);
 
 #endif

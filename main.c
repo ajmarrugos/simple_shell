@@ -1,14 +1,14 @@
 #include "shell.h"
 
 /**
-* main - Main input for the program
-* @argc: Number of arguments
-* @argv: Arguments recieved
-* @envp: Enviroment variable
-* Return: 0 on success
-**/
+ * main - Main input for the program
+ * @argc: Number of arguments
+ * @argv: Arguments recieved
+ * @envp: Enviroment variable
+ * Return: 0 on success
+ **/
 
-int main(int argc, char *argv[], char *envp[] )
+int main(int argc, char **argv)
 {
 	char *input = NULL;
 	size_t len = 0;
@@ -26,8 +26,7 @@ int main(int argc, char *argv[], char *envp[] )
 		nnline(input);
 
 		fflush(stdin);
-
 	}
 	free(input);
-	return(0);
+	return (0);
 }
