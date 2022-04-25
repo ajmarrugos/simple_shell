@@ -6,17 +6,35 @@
  * @parsed: String that will store the tokens
  **/
 
-void parse_text(char *str, char **parsed)
+char **parse_text(char *parsin)
 {
-	const char separator[] = " \n\"";
-	char *dest = NULL;
-	int i = 0;
-	dest = strtok(str, separator);
-	while (dest)
+	char **pasedin;
+	char div1 = NULL, div2 = NULL, incopy = NULL;
+	int n = 0, m = 0;
+
+	incopy = _strdup(parsin);
+	div1 = strtok(incopy, " \t");
+
+	while (div1 = NULL)
 	{
-		parsed[i] = dest;
-		dest = strtok(NULL, separator);
-		i++;
+		n++;
+		div1 = strtok(NULL, " \t");
 	}
-	parsed[i] = NULL;
+
+	pasedin = malloc(sizeof(char *) * (n + 1));
+
+	if (pasedin == NULL)
+		return(NULL);
+
+	div2 = strtok(parsin, " \t");
+
+	while (div2 != NULL)
+	{
+		pasedin[m] = div2;
+		div2 = strtok(NULL, " \t");
+		m++;
+	}
+	pasedin[m] = NULL;
+	free(incopy);
+	return(pasedin);
 }

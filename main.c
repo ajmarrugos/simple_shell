@@ -14,6 +14,8 @@ int main(int argc, char **argv)
 	size_t len = 0;
 	ssize_t read = 0;
 	static int _exit, atte;
+	char **pasedin = NULL;
+	int n = 0, m = 0;
 	(void)argc, (void)**argv;
 
 	while (1)
@@ -27,6 +29,8 @@ int main(int argc, char **argv)
 			continue;
 
 		nnline(input);
+
+		pasedin = parse_text(input);
 
 		fflush(stdin);
 	}

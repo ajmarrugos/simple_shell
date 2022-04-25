@@ -29,6 +29,9 @@ int _strlen(char *s);
 /* Concatenates 2 strings */
 char *_strcat(char *dest, char *src);
 
+/* Duplicates a string*/
+char *_strdup(char *str);
+
 /* Prints the path with a string */
 char *path_printer(char *dir, char *first);
 
@@ -37,5 +40,11 @@ int env_printer(char **env, int *ex_sts);
 
 /* Print a special number */
 void int_printer(int *atte);
+
+/*Will parse/separate text of a string into tokens*/
+char **parse_text(char *parsin);
+
+/* Exit builtin */
+void _exit(char *in, char **pasedin, int *_exitst);
 
 #endif
