@@ -1,12 +1,11 @@
 #include "shell.h"
 
 /**
- * main - Main input for the program
- * @argc: Number of arguments
- * @argv: Arguments recieved
- * @envp: Enviroment variable
- * Return: 0 on success
- **/
+* main - Main input for the program
+* @argc: Number of arguments
+* @argv: Arguments recieved
+* Return: 0 on success
+**/
 
 int main(int argc, char **argv)
 {
