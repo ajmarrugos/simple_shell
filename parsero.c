@@ -18,7 +18,7 @@ char *linecpy = NULL;
 int arg_n = 0, i = 0;
 
 linecpy = _strdup(l);
-parsed = strtok(linecopy, " \t");
+parsed = strtok(linecpy, " \t");
 
 while (parsed != NULL)
 {
@@ -26,7 +26,7 @@ arg_n++;
 parsed = strtok(NULL, " \t");
 }
 
-args = malloc(sizeof(char *) * (arg_num + 1));
+args = malloc(sizeof(char *) * (arg_n + 1));
 
 if (args == NULL)
 return (NULL);

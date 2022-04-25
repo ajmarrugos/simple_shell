@@ -36,8 +36,8 @@ char *_strdup(char *str);
 /* Will parse/separate text of a string into tokens */
 char **parsero(char *l);
 
-/* End of file Ctrl-d */
-int _eof(char *buff, ssize_t reed, int *_exitst);
+/* Helps to implement exit env_printer builtins */
+void builtins(char *input, char **args, char **env, int *ex_st);
 
 /* Prints the enviroment variable */
 int env_printer(char **env, int *ex_sts);
