@@ -36,9 +36,12 @@ int main(int argc, char **argv, char **env)
 
 		if(_strcmp(pasedin[0], "env") == 0)
 		{
-			printenv(env, exit);
+			printenv(env, _exit);
 		}
-		
+
+		status = _path(pasedin[0], pasedin, env, &_exit);
+
+		_xcute(status, pasedin, &_exit, &atte);
 
 		fflush(stdin);
 	}
